@@ -11,8 +11,8 @@ const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
 });
 
-const APP_NAME = "placeholder";
-const DESCRIPTION = "placeholder";
+const APP_NAME = "Browser Extension Manager UI";
+const DESCRIPTION = `Frontend Mentor challenge: ${APP_NAME}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com/placeholder"),

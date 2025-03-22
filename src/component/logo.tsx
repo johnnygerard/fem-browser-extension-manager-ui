@@ -1,5 +1,5 @@
-import { Logomark } from "@/component/svg/logo/logomark";
-import { Logotype } from "@/component/svg/logo/logotype";
+import { Logomark } from "@/component/svg/logomark";
+import { Logotype } from "@/component/svg/logotype";
 import { cn } from "@/util/cn";
 import { memo } from "react";
 

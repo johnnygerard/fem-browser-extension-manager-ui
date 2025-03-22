@@ -48,7 +48,12 @@ const RootLayout = ({ children }: Props) => {
       className={cn(notoSans.variable, "font-sans antialiased")}
       lang="en-US"
     >
-      <body>
+      <body
+        className={cn(
+          "bg-linear-to-b from-[#EBF2FC] to-[#EEFBF9]",
+          "dark:from-[#04091B] dark:to-[#091540]",
+        )}
+      >
         {children}
         <Noscript />
       </body>

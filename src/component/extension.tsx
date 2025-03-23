@@ -25,6 +25,7 @@ export const Extension = memo(
         )}
       >
         <div className="flex items-start gap-4">
+          {/******************** Logo ********************/}
           <Image
             className="size-15"
             src={`/asset/image/extension-logo/${logoFilename}`}
@@ -33,6 +34,7 @@ export const Extension = memo(
             height={60}
           />
           <div>
+            {/******************** Name ********************/}
             <h2
               className={cn(
                 "text-[1.25rem]/[1.2] font-bold -tracking-[0.0125rem]",
@@ -41,6 +43,7 @@ export const Extension = memo(
             >
               {name}
             </h2>
+            {/******************** Description ********************/}
             <p
               className={cn(
                 "mt-2 text-neutral-600 dark:text-neutral-300",
@@ -51,6 +54,7 @@ export const Extension = memo(
             </p>
           </div>
         </div>
+        {/******************** Controls ********************/}
         <div className="flex items-center justify-between">
           <button
             className={cn(

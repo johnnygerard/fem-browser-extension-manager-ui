@@ -60,9 +60,16 @@ export const Extension = memo(
         <div className="flex items-center justify-between">
           <button
             className={cn(
-              "rounded-full px-4 py-2 text-neutral-900 dark:text-neutral-0",
+              "tw_focus_ring rounded-full px-4 py-2 transition-colors",
               "text-[1rem]/[1.4] font-medium -tracking-[0.03125rem]",
+              "text-neutral-900 dark:text-neutral-0",
               "border border-neutral-300 dark:border-neutral-600",
+              "hover:border-transparent hover:bg-red-700",
+              "hover:not-focus-visible:text-neutral-0",
+              "hover:not-focus-visible:dark:text-neutral-900",
+              "hover:dark:border-transparent hover:dark:bg-red-400",
+              "focus-visible:border-transparent focus-visible:bg-neutral-100",
+              "focus-visible:dark:bg-neutral-600",
             )}
             type="button"
             onClick={() => handleRemove(name)}

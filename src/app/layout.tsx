@@ -1,6 +1,7 @@
 import { Noscript } from "@/component/noscript";
 import { cn } from "@/util/cn";
 import type { Metadata } from "next";
+import { loadTheme, ThemeProvider } from "next-theme-provider";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import { memo, ReactNode } from "react";
@@ -42,9 +43,12 @@ type Props = {
   children: ReactNode;
 };
 
-const RootLayout = ({ children }: Props) => {
+const RootLayout = async ({ children }: Props) => {
+  const theme = await loadTheme();
+
   return (
     <html
+      data-theme={theme}
       className={cn(notoSans.variable, "font-sans antialiased")}
       lang="en-US"
     >
@@ -54,7 +58,7 @@ const RootLayout = ({ children }: Props) => {
           "dark:from-[#04091B] dark:to-[#091540]",
         )}
       >
-        {children}
+        <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>
         <Noscript />
       </body>
     </html>

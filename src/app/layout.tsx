@@ -54,6 +54,7 @@ const RootLayout = async ({ children }: Props) => {
     >
       <body
         className={cn(
+          "min-h-screen min-w-min px-4 pt-5 pb-16 tb:px-8 tb:pt-6 dt:pt-10",
           "bg-linear-to-b from-[#EBF2FC] to-[#EEFBF9]",
           "dark:from-[#04091B] dark:to-[#091540]",
         )}

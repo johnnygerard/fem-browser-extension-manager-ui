@@ -20,7 +20,7 @@ const NotFound = () => {
         href="/"
         className={cn(
           "tw_focus_ring rounded px-6 py-3 font-medium text-white",
-          "bg-blue-500 transition-colors hover:bg-blue-600",
+          "bg-blue-600 transition-colors hover:bg-blue-700",
         )}
       >
         Back to Home

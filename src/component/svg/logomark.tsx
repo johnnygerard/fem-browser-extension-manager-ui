@@ -1,17 +1,16 @@
 import { cn } from "@/util/cn";
-import { memo } from "react";
+import { memo, SVGAttributes } from "react";
 
-type Props = {
-  className?: string;
-};
+type Props = SVGAttributes<SVGElement>;
 
-export const Logomark = memo(({ className }: Props) => {
+export const Logomark = memo(({ className, ...props }: Props) => {
   return (
     <svg
       aria-hidden
       className={cn("h-10.5 w-10", className)}
       viewBox="0 0 40 42"
       fill="none"
+      {...props}
     >
       <path
         fillRule="evenodd"

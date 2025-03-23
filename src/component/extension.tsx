@@ -7,12 +7,14 @@ import { memo } from "react";
 type Props = {
   className?: string;
   json: ExtensionJson;
+  handleRemove: (name: string) => void;
 };
 
 export const Extension = memo(
   ({
     className,
     json: { logoFilename, name, description, isActive },
+    handleRemove,
   }: Props) => {
     return (
       <div
@@ -63,6 +65,7 @@ export const Extension = memo(
               "border border-neutral-300 dark:border-neutral-600",
             )}
             type="button"
+            onClick={() => handleRemove(name)}
           >
             Remove
           </button>

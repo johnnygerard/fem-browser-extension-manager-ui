@@ -1,7 +1,8 @@
+"use client";
 import { Extension } from "@/component/extension";
 import type { ExtensionJson } from "@/type/extension-json";
 import { cn } from "@/util/cn";
-import { memo } from "react";
+import { memo, useState } from "react";
 
 type Props = {
   className?: string;
@@ -9,6 +10,12 @@ type Props = {
 };
 
 export const ExtensionList = memo(({ className, extensions }: Props) => {
+  const [list, setList] = useState(extensions);
+
+  const handleRemove = (name: string): void => {
+    setList((value) => value.filter((extension) => extension.name !== name));
+  };
+
   return (
     <ul
       className={cn(
@@ -17,9 +24,9 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
         className,
       )}
     >
-      {extensions.map((value, index) => (
-        <li key={index}>
-          <Extension json={value} />
+      {list.map((value) => (
+        <li key={value.name}>
+          <Extension json={value} handleRemove={handleRemove} />
         </li>
       ))}
     </ul>

@@ -4,11 +4,13 @@ import { memo } from "react";
 
 type Props = {
   className?: string;
+  isActive: boolean;
 };
 
-export const AppSwitch = memo(({ className }: Props) => {
+export const AppSwitch = memo(({ className, isActive }: Props) => {
   return (
     <Switch.Root
+      defaultChecked={isActive}
       className={cn(
         "h-5 w-9 rounded-full bg-neutral-300 p-0.5",
         "data-[state=checked]:bg-red-700 data-[state=checked]:hover:bg-red-500",

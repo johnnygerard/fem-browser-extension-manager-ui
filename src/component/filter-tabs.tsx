@@ -1,15 +1,21 @@
+import { Filter, FILTER } from "@/type/filter";
 import { cn } from "@/util/cn";
 import * as RadioGroup from "@radix-ui/react-radio-group";
 import { memo } from "react";
 
 type Props = {
   className?: string;
+  handleFilterChange: (value: Filter) => void;
 };
 
-export const FilterTabs = memo(({ className }: Props) => {
+export const FilterTabs = memo(({ className, handleFilterChange }: Props) => {
   return (
-    <RadioGroup.Root className={cn("flex gap-3", className)} defaultValue="All">
-      {["All", "Active", "Inactive"].map((label) => (
+    <RadioGroup.Root
+      className={cn("flex gap-3", className)}
+      defaultValue={FILTER.ALL}
+      onValueChange={handleFilterChange}
+    >
+      {Object.values(FILTER).map((label) => (
         <RadioGroup.Item
           className={cn(
             // Base style

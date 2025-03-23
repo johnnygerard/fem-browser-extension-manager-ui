@@ -17,7 +17,7 @@ export const Extension = memo(
     return (
       <div
         className={cn(
-          "flex h-50 w-95 flex-col justify-between rounded-20 p-5",
+          "flex h-50 w-full max-w-95 flex-col justify-between rounded-20 p-5",
           "border border-neutral-200 dark:border-neutral-600",
           "bg-neutral-0 dark:bg-neutral-800 dark:shadow-none",
           "shadow-[0_2px_2px_rgba(194,206,225,0.20),0_1px_5px_1px_rgba(194,206,225,0.22)]",

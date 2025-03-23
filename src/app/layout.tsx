@@ -1,3 +1,4 @@
+import { Header } from "@/component/header";
 import { Noscript } from "@/component/noscript";
 import { cn } from "@/util/cn";
 import type { Metadata } from "next";
@@ -59,7 +60,10 @@ const RootLayout = async ({ children }: Props) => {
           "dark:from-[#04091B] dark:to-[#091540]",
         )}
       >
-        <ThemeProvider initialTheme={theme}>{children}</ThemeProvider>
+        <ThemeProvider initialTheme={theme}>
+          <Header />
+          <main>{children}</main>
+        </ThemeProvider>
         <Noscript />
       </body>
     </html>

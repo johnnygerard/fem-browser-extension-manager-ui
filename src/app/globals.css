@@ -6,6 +6,12 @@
   }
 }
 
+@layer components {
+  .tw_focus_ring {
+    @apply outline-2 outline-offset-2 outline-transparent focus-visible:outline-red-400;
+  }
+}
+
 @custom-variant dark {
   &:root[data-theme="dark"],
   :root[data-theme="dark"] & {

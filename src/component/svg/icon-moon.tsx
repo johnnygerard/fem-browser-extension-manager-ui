@@ -6,8 +6,7 @@ type Props = SVGAttributes<SVGElement>;
 export const IconMoon = memo(({ className, ...props }: Props) => {
   return (
     <svg
-      aria-hidden
-      className={cn("size-5.5 animate-fade-in dark:hidden", className)}
+      className={cn("dark:hidden", className)}
       viewBox="0 0 22 22"
       fill="none"
       {...props}

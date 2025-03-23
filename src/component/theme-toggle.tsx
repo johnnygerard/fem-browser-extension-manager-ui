@@ -29,8 +29,9 @@ export const ThemeToggle = memo(({ className }: Props) => {
             : `Activate ${isDark ? "light" : "dark"} theme`
         }
       >
-        <IconMoon />
-        <IconSun />
+        {[IconSun, IconMoon].map((Icon, index) => (
+          <Icon aria-hidden className="size-5.5 animate-fade-in" key={index} />
+        ))}
       </Toggle.Root>
     </div>
   );

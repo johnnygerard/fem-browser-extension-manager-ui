@@ -65,7 +65,7 @@ const RootLayout = async ({ children }: Props) => {
           {/* This wrapper div allows the header to match the width of the main content */}
           <div>
             <Header />
-            <main>{children}</main>
+            <main className="mt-10 dt:mt-16">{children}</main>
           </div>
         </ThemeProvider>
         <Noscript />

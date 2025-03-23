@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const NotFound = () => {
   return (
-    <div className="mt-20 flex flex-col items-center text-center">
+    <div className="flex flex-col items-center text-center">
       <h1 className="mb-4 text-4xl font-bold text-gray-800 dark:text-gray-100">
         404 Not Found
       </h1>

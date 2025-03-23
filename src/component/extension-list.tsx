@@ -19,7 +19,7 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
   return (
     <ul
       className={cn(
-        "mt-10 grid gap-3 tb:grid-cols-[repeat(2,minmax(0,max-content))] dt:mt-16",
+        "grid gap-3 tb:grid-cols-[repeat(2,minmax(0,max-content))]",
         "dt:grid-cols-[repeat(3,minmax(0,max-content))]",
         className,
       )}

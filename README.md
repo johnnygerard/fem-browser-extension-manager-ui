@@ -4,9 +4,9 @@ This is my solution to
 the [Browser extension manager UI challenge](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp)
 from [Frontend Mentor](https://www.frontendmentor.io/).
 
-![project status](https://img.shields.io/badge/status-work_in_progress-red?style=for-the-badge)
+[![project status](https://img.shields.io/badge/status-solution_published-success?style=for-the-badge)](https://www.frontendmentor.io/solutions/made-with-radix-ui-JUramX3HVZ)
 [![live site](https://img.shields.io/badge/live_site-blue?style=for-the-badge)](https://fem-browser-extension-manager-ui-jgerard.vercel.app)
-![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)
+[![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)](https://googlechrome.github.io/lighthouse/viewer/?gist=4841f3e1ab6022f7ea60a015c01a27f9)
 
 ## Tech Stack
 

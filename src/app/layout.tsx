@@ -17,7 +17,9 @@ const APP_NAME = "Browser Extension Manager UI";
 const DESCRIPTION = `Frontend Mentor challenge: ${APP_NAME}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com/placeholder"),
+  metadataBase: new URL(
+    "https://fem-browser-extension-manager-ui-jgerard.vercel.app",
+  ),
   title: {
     template: `%s | ${APP_NAME}`,
     default: APP_NAME,

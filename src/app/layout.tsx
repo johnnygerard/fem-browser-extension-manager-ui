@@ -13,7 +13,7 @@ const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
 });
 
-const APP_NAME = "Browser Extension Manager UI";
+const APP_NAME = "Extensions";
 const DESCRIPTION = `Frontend Mentor challenge: ${APP_NAME}`;
 
 export const metadata: Metadata = {

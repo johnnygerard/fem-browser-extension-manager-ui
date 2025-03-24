@@ -4,16 +4,16 @@ import { memo } from "react";
 
 type Props = {
   className?: string;
-  handleActiveToggle: () => void;
-  isActive: boolean;
+  defaultChecked: boolean;
+  handleCheckedChange: () => void;
 };
 
 export const AppSwitch = memo(
-  ({ className, handleActiveToggle, isActive }: Props) => {
+  ({ className, defaultChecked, handleCheckedChange }: Props) => {
     return (
       <Switch.Root
-        defaultChecked={isActive}
-        onCheckedChange={handleActiveToggle}
+        defaultChecked={defaultChecked}
+        onCheckedChange={handleCheckedChange}
         className={cn(
           "h-5 w-9 rounded-full bg-neutral-300 p-0.5",
           "data-[state=checked]:bg-red-700 data-[state=checked]:hover:bg-red-500",

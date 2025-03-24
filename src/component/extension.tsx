@@ -79,8 +79,8 @@ export const Extension = memo(
             Remove
           </button>
           <AppSwitch
-            handleActiveToggle={() => handleActiveToggle(name)}
-            isActive={isActive}
+            defaultChecked={isActive}
+            handleCheckedChange={() => handleActiveToggle(name)}
           />
         </div>
       </div>

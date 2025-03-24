@@ -7,6 +7,7 @@ import { memo } from "react";
 type Props = {
   className?: string;
   json: ExtensionJson;
+  handleActiveToggle: (name: string) => void;
   handleRemove: (name: string) => void;
 };
 
@@ -14,6 +15,7 @@ export const Extension = memo(
   ({
     className,
     json: { logoFilename, name, description, isActive },
+    handleActiveToggle,
     handleRemove,
   }: Props) => {
     return (
@@ -76,7 +78,10 @@ export const Extension = memo(
           >
             Remove
           </button>
-          <AppSwitch isActive={isActive} />
+          <AppSwitch
+            handleActiveToggle={() => handleActiveToggle(name)}
+            isActive={isActive}
+          />
         </div>
       </div>
     );

@@ -23,6 +23,16 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
             : (extension) => !extension.isActive,
         );
 
+  const handleActiveToggle = (name: string): void => {
+    setList((value) =>
+      value.map((extension) =>
+        extension.name === name
+          ? { ...extension, isActive: !extension.isActive }
+          : extension,
+      ),
+    );
+  };
+
   const handleFilterChange = (value: Filter): void => {
     setFilter(value);
   };
@@ -58,7 +68,11 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
       >
         {filteredList.map((value) => (
           <li key={value.name}>
-            <Extension json={value} handleRemove={handleRemove} />
+            <Extension
+              json={value}
+              handleRemove={handleRemove}
+              handleActiveToggle={handleActiveToggle}
+            />
           </li>
         ))}
       </ul>

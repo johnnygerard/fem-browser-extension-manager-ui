@@ -3,15 +3,17 @@ import * as Switch from "@radix-ui/react-switch";
 import { memo } from "react";
 
 type Props = {
+  ariaLabel?: string;
   className?: string;
   defaultChecked: boolean;
   handleCheckedChange: () => void;
 };
 
 export const AppSwitch = memo(
-  ({ className, defaultChecked, handleCheckedChange }: Props) => {
+  ({ ariaLabel, className, defaultChecked, handleCheckedChange }: Props) => {
     return (
       <Switch.Root
+        aria-label={ariaLabel}
         defaultChecked={defaultChecked}
         onCheckedChange={handleCheckedChange}
         className={cn(

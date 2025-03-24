@@ -79,6 +79,7 @@ export const Extension = memo(
             Remove
           </button>
           <AppSwitch
+            ariaLabel="Active"
             defaultChecked={isActive}
             handleCheckedChange={() => handleActiveToggle(name)}
           />

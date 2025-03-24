@@ -7,11 +7,11 @@ export const Noscript = memo(() => {
         style={{
           position: "fixed",
           zIndex: 1000,
-          top: 0,
-          left: 0,
-          transform: "translate(calc(-50% + 50vw), calc(-50% + 50vh))",
+          inset: 0,
+          display: "grid",
+          placeItems: "center",
           padding: "1rem",
-          pointerEvents: "none",
+          backgroundColor: "rgba(0,0,0,0.5)",
         }}
         role="alert"
       >
@@ -24,7 +24,6 @@ export const Noscript = memo(() => {
             borderRadius: "0.5rem",
             textAlign: "center",
             lineHeight: 1.5,
-            pointerEvents: "auto",
             maxWidth: "30rem",
           }}
         >

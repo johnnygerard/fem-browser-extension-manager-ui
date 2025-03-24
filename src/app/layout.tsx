@@ -1,21 +1,25 @@
+import { Header } from "@/component/header";
 import { Noscript } from "@/component/noscript";
 import { cn } from "@/util/cn";
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { loadTheme, ThemeProvider } from "next-theme-provider";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
 import { memo, ReactNode } from "react";
 
-const geistSans = Geist({
+const notoSans = Noto_Sans({
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  variable: "--font-noto-sans",
 });
 
-const APP_NAME = "placeholder";
-const DESCRIPTION = "placeholder";
+const APP_NAME = "Browser Extension Manager UI";
+const DESCRIPTION = `Frontend Mentor challenge: ${APP_NAME}`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com/placeholder"),
+  metadataBase: new URL(
+    "https://fem-browser-extension-manager-ui-jgerard.vercel.app",
+  ),
   title: {
     template: `%s | ${APP_NAME}`,
     default: APP_NAME,
@@ -42,14 +46,30 @@ type Props = {
   children: ReactNode;
 };
 
-const RootLayout = ({ children }: Props) => {
+const RootLayout = async ({ children }: Props) => {
+  const theme = await loadTheme();
+
   return (
     <html
-      className={cn(geistSans.variable, "font-sans antialiased")}
+      data-theme={theme}
+      className={cn(notoSans.variable, "font-sans antialiased")}
       lang="en-US"
     >
-      <body>
-        {children}
+      <body
+        className={cn(
+          "flex min-h-screen min-w-min flex-col items-center",
+          "px-4 pt-5 pb-16 tb:px-8 tb:pt-6 dt:pt-10",
+          "bg-linear-to-b from-[#EBF2FC] to-[#EEFBF9]",
+          "dark:from-[#04091B] dark:to-[#091540]",
+        )}
+      >
+        <ThemeProvider initialTheme={theme}>
+          {/* This wrapper div allows the header to match the width of the main content */}
+          <div>
+            <Header />
+            <main className="mt-10 dt:mt-16">{children}</main>
+          </div>
+        </ThemeProvider>
         <Noscript />
       </body>
     </html>

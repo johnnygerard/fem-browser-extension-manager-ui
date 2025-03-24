@@ -13,6 +13,7 @@ from [Frontend Mentor](https://www.frontendmentor.io/).
 ### Frontend
 
 - **React Framework**: [Next.js 15](https://nextjs.org/)
+- **Headless UI Library**: [Radix UI](https://www.radix-ui.com/)
 - **Style**: [Tailwind CSS 4](https://tailwindcss.com/)
 
 ### Backend

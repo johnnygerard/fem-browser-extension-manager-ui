@@ -1,5 +1,6 @@
 "use client";
 import { Extension } from "@/component/extension";
+import { ExtensionPlaceholder } from "@/component/extension-placeholder";
 import { FilterTabs } from "@/component/filter-tabs";
 import type { ExtensionJson } from "@/type/extension-json";
 import { type Filter, FILTER } from "@/type/filter";
@@ -75,6 +76,22 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
             />
           </li>
         ))}
+        {/* Placeholders to maintain layout width */}
+        {filteredList.length < 1 && (
+          <ExtensionPlaceholder key="mobile-placeholder" />
+        )}
+        {filteredList.length < 2 && (
+          <ExtensionPlaceholder
+            key="tablet-placeholder"
+            className="hidden tb:block"
+          />
+        )}
+        {filteredList.length < 3 && (
+          <ExtensionPlaceholder
+            key="desktop-placeholder"
+            className="hidden dt:block"
+          />
+        )}
       </ul>
     </>
   );

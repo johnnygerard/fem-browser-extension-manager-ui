@@ -5,7 +5,7 @@
     "@radix-ui/react-toggle": "^1.1.2",
     "clsx": "^2.1.1",
     "next": "^15.2.1",
-    "next-theme-provider": "^1.0.1",
+    "next-theme-provider": "^1.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.2"
@@ -19,7 +19,7 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.13.10",
+    "@types/node": "^24.10.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "eslint": "^9.22.0",
@@ -34,8 +34,8 @@
     "typescript": "^5.8.2"
   },
   "engines": {
-    "node": "22",
-    "npm": "10"
+    "node": "24",
+    "npm": "11"
   },
   "name": "starter-nextjs-15",
   "private": true,

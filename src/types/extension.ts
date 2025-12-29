@@ -1,4 +1,4 @@
-export type ExtensionJson = {
+export type Extension = {
   logoFilename: string;
   name: string;
   description: string;

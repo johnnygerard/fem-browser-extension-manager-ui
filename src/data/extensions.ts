@@ -1,0 +1,82 @@
+import type { Extension } from "~/types/extension";
+
+export const extensions: Extension[] = [
+  {
+    logoFilename: "devlens.svg",
+    name: "DevLens",
+    description:
+      "Quickly inspect page layouts and visualize element boundaries.",
+    isActive: true,
+  },
+  {
+    logoFilename: "style-spy.svg",
+    name: "StyleSpy",
+    description: "Instantly analyze and copy CSS from any webpage element.",
+    isActive: true,
+  },
+  {
+    logoFilename: "speed-boost.svg",
+    name: "SpeedBoost",
+    description: "Optimizes browser resource usage to accelerate page loading.",
+    isActive: false,
+  },
+  {
+    logoFilename: "json-wizard.svg",
+    name: "JSONWizard",
+    description:
+      "Formats, validates, and prettifies JSON responses in-browser.",
+    isActive: true,
+  },
+  {
+    logoFilename: "tab-master-pro.svg",
+    name: "TabMaster Pro",
+    description: "Organizes browser tabs into groups and sessions.",
+    isActive: true,
+  },
+  {
+    logoFilename: "viewport-buddy.svg",
+    name: "ViewportBuddy",
+    description:
+      "Simulates various screen resolutions directly within the browser.",
+    isActive: false,
+  },
+  {
+    logoFilename: "markup-notes.svg",
+    name: "Markup Notes",
+    description:
+      "Enables annotation and notes directly onto webpages for collaborative debugging.",
+    isActive: true,
+  },
+  {
+    logoFilename: "grid-guides.svg",
+    name: "GridGuides",
+    description:
+      "Overlay customizable grids and alignment guides on any webpage.",
+    isActive: false,
+  },
+  {
+    logoFilename: "palette-picker.svg",
+    name: "Palette Picker",
+    description: "Instantly extracts color palettes from any webpage.",
+    isActive: true,
+  },
+  {
+    logoFilename: "link-checker.svg",
+    name: "LinkChecker",
+    description: "Scans and highlights broken links on any page.",
+    isActive: true,
+  },
+  {
+    logoFilename: "dom-snapshot.svg",
+    name: "DOM Snapshot",
+    description: "Capture and export DOM structures quickly.",
+    isActive: false,
+  },
+  {
+    logoFilename: "console-plus.svg",
+    name: "ConsolePlus",
+    description:
+      "Enhanced developer console with advanced filtering and logging.",
+    isActive: true,
+  },
+];

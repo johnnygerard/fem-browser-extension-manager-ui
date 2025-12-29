@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Geist } from "next/font/google";
 import type { FC, ReactNode } from "react";
 import "~/styles/globals.css";
@@ -39,8 +40,11 @@ const RootLayout: FC<Props> = ({ children }) => {
       className={geistSans.variable}
       data-scroll-behavior="smooth"
       lang="en-US"
+      suppressHydrationWarning
     >
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 };

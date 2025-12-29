@@ -11,14 +11,14 @@ type Props = {
 };
 
 export const ThemeToggleCore: FC<Props> = ({ className }) => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
-  if (theme !== "light" && theme !== "dark") {
-    console.error("Unexpected theme value:", { theme });
+  if (resolvedTheme !== "light" && resolvedTheme !== "dark") {
+    console.error("Unexpected theme value:", { resolvedTheme });
     return null;
   }
 
-  const isDark = theme === "dark";
+  const isDark = resolvedTheme === "dark";
 
   return (
     <Toggle.Root

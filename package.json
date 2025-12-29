@@ -27,9 +27,17 @@
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^4.0.16"
   },
-  "engines": {
-    "node": "24",
-    "npm": "11"
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "onFail": "warn",
+      "version": "11"
+    },
+    "runtime": {
+      "name": "node",
+      "onFail": "warn",
+      "version": "24"
+    }
   },
   "name": "fem-browser-extension-manager-ui",
   "private": true,

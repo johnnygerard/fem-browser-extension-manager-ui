@@ -1,14 +1,6 @@
-import { ExtensionList } from "@/component/extension-list";
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
-import { cwd } from "node:process";
-import { memo } from "react";
+import type { FC } from "react";
+import { ExtensionList } from "~/components/extension-list";
+import { extensions } from "~/data/extensions";
 
-const HomePage = async () => {
-  const path = join(cwd(), "data/extensions.json");
-  const json = await readFile(path, "utf8");
-
-  return <ExtensionList extensions={JSON.parse(json)} />;
-};
-
-export default memo(HomePage);
+const HomePage: FC = () => <ExtensionList extensions={extensions} />;
+export default HomePage;

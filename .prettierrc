@@ -1,5 +1,0 @@
-{
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindAttributes": ["focusRingClass"],
-  "tailwindStylesheet": "src/app/globals.css"
-}

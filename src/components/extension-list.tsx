@@ -1,18 +1,18 @@
 "use client";
-import { Extension } from "@/component/extension";
-import { ExtensionPlaceholder } from "@/component/extension-placeholder";
-import { FilterTabs } from "@/component/filter-tabs";
-import type { ExtensionJson } from "@/type/extension-json";
-import { type Filter, FILTER } from "@/type/filter";
-import { cn } from "@/util/cn";
-import { memo, useState } from "react";
+import { useState, type FC } from "react";
+import { Extension } from "~/components/extension";
+import { ExtensionPlaceholder } from "~/components/extension-placeholder";
+import { FilterTabs } from "~/components/filter-tabs";
+import type { ExtensionData } from "~/types/extension-data";
+import { FILTER, type Filter } from "~/types/filter";
+import { tw } from "~/utils/tw";
 
 type Props = {
   className?: string;
-  extensions: ExtensionJson[];
+  extensions: ExtensionData[];
 };
 
-export const ExtensionList = memo(({ className, extensions }: Props) => {
+export const ExtensionList: FC<Props> = ({ className, extensions }) => {
   const [list, setList] = useState(extensions);
   const [filter, setFilter] = useState<Filter>(FILTER.ALL);
   const filteredList =
@@ -45,13 +45,13 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
   return (
     <>
       <div
-        className={cn(
+        className={tw(
           "flex flex-col items-center gap-6",
           "tb:flex-row tb:justify-between tb:gap-12",
         )}
       >
         <h1
-          className={cn(
+          className={tw(
             "text-[2.125rem]/[1] font-bold -tracking-[0.0625rem]",
             "text-neutral-900 dark:text-neutral-0",
           )}
@@ -61,7 +61,7 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
         <FilterTabs handleFilterChange={handleFilterChange} />
       </div>
       <ul
-        className={cn(
+        className={tw(
           "mt-10 grid gap-3 tb:mt-8 tb:grid-cols-[repeat(2,minmax(0,max-content))]",
           "dt:grid-cols-[repeat(3,minmax(0,max-content))]",
           className,
@@ -70,7 +70,7 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
         {filteredList.map((value) => (
           <li key={value.name}>
             <Extension
-              json={value}
+              data={value}
               handleRemove={handleRemove}
               handleActiveToggle={handleActiveToggle}
             />
@@ -95,6 +95,4 @@ export const ExtensionList = memo(({ className, extensions }: Props) => {
       </ul>
     </>
   );
-});
-
-ExtensionList.displayName = "ExtensionList";
+};

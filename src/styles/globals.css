@@ -11,11 +11,13 @@
   input,
   select,
   textarea {
-    @apply outline-2 outline-offset-0 outline-transparent;
+    @apply outline-2 outline-offset-2 outline-transparent;
     /* Note that `outline-style` needs the `:focus-visible` pseudo-class to override the `auto` default in Firefox */
-    @apply focus-visible:outline-blue-400 focus-visible:outline-solid;
+    @apply focus-visible:outline-red-400 focus-visible:outline-solid;
   }
 }
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @media screen and (update: fast) and (prefers-reduced-motion: no-preference) {
   :root {
@@ -32,5 +34,38 @@
 /* `@theme inline` is required when referencing CSS custom properties */
 /* @see https://tailwindcss.com/docs/theme#referencing-other-variables */
 @theme inline {
-  --font-sans: var(--font-geist-sans);
+  --breakpoint-tb: 48em; /* Tablet: 768px */
+  --breakpoint-dt: 90em; /* Desktop: 1440px */
+
+  --color-neutral-0: #fbfdfe;
+  --color-neutral-100: #eeeeee;
+  --color-neutral-200: #d6e2f5;
+  --color-neutral-300: #c6c6c6;
+  --color-neutral-600: #535868;
+  --color-neutral-700: #2f364b;
+  --color-neutral-800: #202535;
+  --color-neutral-900: #091540;
+
+  --color-red-400: #f25c54;
+  --color-red-500: #de4840;
+  --color-red-700: #c7231a;
+
+  --font-sans: var(--font-noto-sans);
+
+  --radius-4: 0.25rem;
+  --radius-6: 0.375rem;
+  --radius-8: 0.5rem;
+  --radius-10: 0.625rem;
+  --radius-12: 0.75rem;
+  --radius-16: 1rem;
+  --radius-20: 1.25rem;
+  --radius-24: 1.5rem;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  }
+  --animate-fade-in: fadeIn var(--default-transition-duration)
+    var(--default-transition-timing-function);
 }

@@ -31,7 +31,7 @@
     "node": "24",
     "npm": "11"
   },
-  "name": "starter-nextjs-16",
+  "name": "fem-browser-extension-manager-ui",
   "private": true,
   "scripts": {
     "build": "next build",

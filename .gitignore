@@ -1,0 +1,22 @@
+/node_modules/
+
+# Next.js
+/.next/
+/next-env.d.ts
+/out/
+
+# TypeScript
+/tsconfig.tsbuildinfo
+
+# Migration
+/old-repository/
+
+# VS Code
+/.vscode/mcp.json
+
+# Playwright
+/blob-report/
+/playwright-report/
+/playwright/.auth/
+/playwright/.cache/
+/test-results/

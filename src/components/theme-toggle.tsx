@@ -1,40 +1,43 @@
 "use client";
-import { IconMoon } from "@/component/svg/icon-moon";
-import { IconSun } from "@/component/svg/icon-sun";
-import { cn } from "@/util/cn";
-import * as Toggle from "@radix-ui/react-toggle";
-import { useThemeContext } from "next-theme-provider";
-import { memo } from "react";
+import { useTheme } from "next-themes";
+import { Toggle } from "radix-ui";
+import type { FC } from "react";
+import { IconMoon } from "~/components/svg/icon-moon";
+import { IconSun } from "~/components/svg/icon-sun";
+import { tw } from "~/utils/tw";
 
 type Props = {
   className?: string;
 };
 
-export const ThemeToggle = memo(({ className }: Props) => {
-  const { toggleTheme, isDark } = useThemeContext();
+export const ThemeToggle: FC<Props> = ({ className }) => {
+  const { theme, setTheme } = useTheme();
+
+  if (theme !== "light" && theme !== "dark") {
+    console.error("Unexpected theme value:", { theme });
+    return null;
+  }
+
+  const isDark = theme === "dark";
 
   return (
-    <div className={className}>
-      <Toggle.Root
-        className={cn(
-          "grid size-12.5 cursor-pointer place-items-center rounded-12",
-          "tw_focus_ring bg-neutral-100 transition-colors hover:bg-neutral-300",
-          "dark:bg-neutral-700 dark:hover:bg-neutral-600",
-        )}
-        onPressedChange={toggleTheme}
-        aria-label="Dark theme"
-        title={
-          isDark === null
-            ? undefined
-            : `Activate ${isDark ? "light" : "dark"} theme`
-        }
-      >
-        {[IconSun, IconMoon].map((Icon, index) => (
-          <Icon aria-hidden className="size-5.5 animate-fade-in" key={index} />
-        ))}
-      </Toggle.Root>
-    </div>
+    <Toggle.Root
+      aria-label="Dark theme"
+      className={tw(
+        "grid size-full place-items-center rounded-12",
+        "bg-neutral-100 transition-colors hover:bg-neutral-300",
+        "dark:bg-neutral-700 dark:hover:bg-neutral-600",
+        className,
+      )}
+      pressed={isDark}
+      onPressedChange={(pressed) => {
+        setTheme(pressed ? "dark" : "light");
+      }}
+      title={`Activate ${isDark ? "light" : "dark"} theme`}
+    >
+      {[IconSun, IconMoon].map((Icon, index) => (
+        <Icon aria-hidden className="size-5.5 animate-fade-in" key={index} />
+      ))}
+    </Toggle.Root>
   );
-});
-
-ThemeToggle.displayName = "ThemeToggle";
+};

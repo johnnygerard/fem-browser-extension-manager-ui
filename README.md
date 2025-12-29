@@ -1,7 +1,12 @@
-# Next.js 16 Starter
+# Frontend Mentor | Browser Extension Manager UI
 
-This starter repository facilitates the creation of new Next.js projects using the configuration described below.  
-To learn how to use a GitHub template repository, check out [Creating a repository from a template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+This is my solution to
+the [Browser extension manager UI challenge](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp)
+from [Frontend Mentor](https://www.frontendmentor.io/).
+
+[![project status](https://img.shields.io/badge/status-solution_published-success?style=for-the-badge)](https://www.frontendmentor.io/solutions/made-with-radix-ui-JUramX3HVZ)
+[![live site](https://img.shields.io/badge/live_site-blue?style=for-the-badge)](https://fem-browser-extension-manager-ui-jgerard.vercel.app)
+[![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)](https://googlechrome.github.io/lighthouse/viewer/?gist=4841f3e1ab6022f7ea60a015c01a27f9)
 
 ## Tech Stack
 
@@ -9,6 +14,7 @@ To learn how to use a GitHub template repository, check out [Creating a reposito
 
 - **UI library**: [React 19](https://react.dev/)
 - **Framework**: [Next.js 16](https://nextjs.org/)
+- **Headless UI Library**: [Radix UI](https://www.radix-ui.com/)
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
 
 ### Backend
@@ -37,6 +43,16 @@ npm install --save-exact --save-dev prettier@latest prettier-plugin-tailwindcss@
 - **Formatter**: [Prettier](https://prettier.io/)
 - **Linter**: [ESLint](https://eslint.org/)
 - **AI assistant**: [GitHub Copilot](https://github.com/features/copilot)
+
+## Screenshots
+
+### Home Page (Mobile - Inactive - Light Mode)
+
+![screenshot](docs/screenshots/mobile.avif)
+
+### Home Page (Desktop - Active - Dark Mode)
+
+![screenshot](docs/screenshots/desktop.avif)
 
 ## Copyright
 

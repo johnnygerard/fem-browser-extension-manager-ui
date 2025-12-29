@@ -1,11 +1,6 @@
 import type { FC } from "react";
+import { ExtensionList } from "~/components/extension-list";
+import { extensions } from "~/data/extensions";
 
-const HomePage: FC = () => {
-  return (
-    <div className="grid min-h-screen place-items-center">
-      <h1>Deployment successful!</h1>
-    </div>
-  );
-};
-
+const HomePage: FC = () => <ExtensionList extensions={extensions} />;
 export default HomePage;

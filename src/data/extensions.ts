@@ -1,6 +1,6 @@
-import type { Extension } from "~/types/extension";
+import type { ExtensionData } from "~/types/extension-data";
 
-export const extensions: Extension[] = [
+export const extensions: ExtensionData[] = [
   {
     logoFilename: "devlens.svg",
     name: "DevLens",

@@ -1,4 +1,4 @@
-export type Extension = {
+export type ExtensionData = {
   logoFilename: string;
   name: string;
   description: string;

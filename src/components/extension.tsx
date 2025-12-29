@@ -30,7 +30,7 @@ export const Extension: FC<Props> = ({
       {/******************** Logo ********************/}
       <Image
         className="size-15"
-        src={`/asset/image/extension-logo/${logoFilename}`}
+        src={`/assets/images/extension-logos/${logoFilename}`}
         alt=""
         width={60}
         height={60}

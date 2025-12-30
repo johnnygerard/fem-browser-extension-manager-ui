@@ -6,7 +6,7 @@ from [Frontend Mentor](https://www.frontendmentor.io/).
 
 [![project status](https://img.shields.io/badge/status-solution_published-success?style=for-the-badge)](https://www.frontendmentor.io/solutions/made-with-radix-ui-JUramX3HVZ)
 [![live site](https://img.shields.io/badge/live_site-blue?style=for-the-badge)](https://fem-browser-extension-manager-ui-jgerard.vercel.app)
-[![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)](https://googlechrome.github.io/lighthouse/viewer/?gist=4841f3e1ab6022f7ea60a015c01a27f9)
+[![Lighthouse report](https://img.shields.io/badge/lighthouse-F44B21?style=for-the-badge&logo=lighthouse&logoColor=fff)](https://googlechrome.github.io/lighthouse/viewer/?gist=fce892a2e81c1a7bdc911e1ac675e94a)
 
 ## Tech Stack
 
